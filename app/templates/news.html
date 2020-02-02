@@ -1,0 +1,24 @@
+<!--{% extends 'base.html' %}-->
+{% block styles%}
+      {{ super() }}
+     <link  type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/news.css')}}">
+
+{% endblock %}
+{% block content %}
+     <div class="container">
+    {% for sasa in heads %}
+
+
+         <li>{{sasa.description}}</li>
+         <li>{{sasa.timepublished}}</li>
+         <a href="{{sasa.link}}">{{sasa.link}}</a>
+
+       <br>
+    <img src="{{sasa.image}}" class="img-responsive">
+
+
+
+    {% endfor %}
+     </div>
+
+{% endblock %}
