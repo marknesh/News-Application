@@ -18,7 +18,11 @@ def headline():
 def index(sources):
     topheadline = get_headlines(sources)
     title = 'Welcome to the news website'
-    return render_template('news.html', title = title,heads=topheadline)
+    if topheadline:
+        return render_template('news.html', title = title,heads=topheadline)
+    else:
+
+
 
 
 @app.route('/search/<query>')
