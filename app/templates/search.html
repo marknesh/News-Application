@@ -1,9 +1,11 @@
+{% extends 'base.html' %}
 {%block styles%}
       {{ super() }}
       <link  type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/news.css')}}">
 
 {% endblock %}
 {% block content %}
+<div class="container">
 {% for newst in search %}
       <li>{{newst.description}}</li>
          <li>Time published: {{newst.timepublished}}</li>
@@ -15,5 +17,6 @@
 
 
 {% endfor %}
+</div>
 
 {% endblock %}
