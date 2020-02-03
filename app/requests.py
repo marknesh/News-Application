@@ -13,8 +13,8 @@ search_url = app.config['SEARCH_URL']
 head_url = app.config['HEADLINE_URL']
 
 
-def get_news():
-    news_url = base_url.format(api_key)
+def get_news(category):
+    news_url = base_url.format(category,api_key)
     with urllib.request.urlopen(news_url) as url:
         news_data = url.read()
         new_news = json.loads(news_data)
@@ -36,9 +36,10 @@ def process_news(news_list):
         id = newss.get('id')
         linkurl = newss.get('url')
         des = newss.get('description')
+        category=newss.get('category')
 
         if name:
-            sourcesfornews = News(name,id,linkurl,des)
+            sourcesfornews = News(name,id,linkurl,des,category)
             news_sources.append(sourcesfornews)
 
     return  news_sources

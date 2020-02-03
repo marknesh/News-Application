@@ -1,10 +1,12 @@
 class News:
 
-    def __init__(self,name,id,linkurl,des):
+    def __init__(self,name,id,linkurl,des,category):
+
         self.name=name
         self.id=id
         self.linkurl=linkurl
         self.des=des
+        self.category = category
 
 class Article:
 
