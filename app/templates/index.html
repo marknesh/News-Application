@@ -24,23 +24,14 @@
             {{macro.display(business)}}
 
                    <h1>Sports</h1>
-
-              {{macro.display(sports)}}
+            {{macro.display(sports)}}
 
 
                 <h1>Technology</h1>
-              {{macro.display(technology)}}
+            {{macro.display(technology)}}
                   <h1>Entertainment</h1>
 
-        {%for entertainment in entertainment %}
-
-                            <li>
-         <a href="/sources/{{entertainment.id}}">{{entertainment.name}}</a>
-
-
-            </li>
-
-         {% endfor %}
+            {{macro.display(entertainment)}}
 
 
 
