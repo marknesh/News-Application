@@ -5,6 +5,7 @@ from flask import render_template,redirect,url_for,request
 from .requests import get_news,get_headlines,get_search,get_topstories
 @app.route('/')
 def headline():
+
     newsources = get_news()
     toplines=get_topstories('us')
     search_url= request.args.get('search_article')
