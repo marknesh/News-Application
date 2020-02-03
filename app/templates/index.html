@@ -24,28 +24,12 @@
             {{macro.display(business)}}
 
                    <h1>Sports</h1>
-      {% for newsources in source  %}
 
-            <li>
-
-         <a href="/sources/{{newsources.id}}">{{newsources.name}}</a>
+              {{macro.display(sports)}}
 
 
-            </li>
-
-
-      {% endfor %}
                 <h1>Technology</h1>
-       {% for technology in technology %}
-
-
-                      <li>
-         <a href="/sources/{{technology.id}}">{{technology.name}}</a>
-
-
-            </li>
-
-        {% endfor %}
+              {{macro.display(technology)}}
                   <h1>Entertainment</h1>
 
         {%for entertainment in entertainment %}
