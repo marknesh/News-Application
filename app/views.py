@@ -39,5 +39,5 @@ def search(query):
 @app.errorhandler(404)
 def err(error):
 
-    return render_template('error.html'),404
+    return render_template('error.html'), 404
 
