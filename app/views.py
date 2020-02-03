@@ -21,7 +21,7 @@ def index(sources):
     if topheadline:
         return render_template('news.html', title = title,heads=topheadline)
     else:
-        return render_template('blank.html')
+        return render_template('blanksource.html')
 
 
 
@@ -34,7 +34,7 @@ def search(query):
     if newst:
         return render_template('search.html',search=newst)
     else:
-        return render_template('blanksource.html')
+        return render_template('blank.html')
 
 @app.errorhandler(404)
 def err(error):
