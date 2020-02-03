@@ -34,7 +34,7 @@ def search(query):
     if newst:
         return render_template('search.html',search=newst)
     else:
-        return render_template('blank.html')
+        return render_template('blanksource.html')
 
 @app.errorhandler(404)
 def err(error):
