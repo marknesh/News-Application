@@ -21,6 +21,7 @@ def index(sources):
     if topheadline:
         return render_template('news.html', title = title,heads=topheadline)
     else:
+        return render_template('blank.html')
 
 
 
