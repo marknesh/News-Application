@@ -6,13 +6,17 @@ from .requests import get_news,get_headlines,get_search,get_topstories
 @app.route('/')
 def headline():
 
-    newsources = get_news('sports')
+    newsources = get_news('business')
+    business=get_news('sports')
+    technology=get_news('technology')
+
+
     toplines=get_topstories('us')
     search_url= request.args.get('search_article')
     if search_url:
         return redirect(url_for('search',query=search_url))
     else:
-        return render_template('index.html', source=newsources,headlines=toplines)
+        return render_template('index.html', source=newsources,headlines=toplines,business=business,technology=technology)
 
 @app.route('/sources/<sources>')
 def index(sources):

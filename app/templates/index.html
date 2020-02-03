@@ -18,14 +18,41 @@
         <div class="row">
             <div class="col-sm-2 col-md-6">
                <h2><b><i>Sources</i></b></h2>
+                 <h1>Sports</h1>
       {% for newsources in source %}
+
+
             <li>
+
          <a href="/sources/{{newsources.id}}">{{newsources.name}}</a>
 
 
             </li>
 
       {% endfor %}
+                 <h1>Business</h1>
+      {% for business in business %}
+
+                <li>
+         <a href="/sources/{{business.id}}">{{business.name}}</a>
+
+
+            </li>
+      {% endfor %}
+                <h1>Technology</h1>
+       {% for technology in technology %}
+
+
+                      <li>
+         <a href="/sources/{{technology.id}}">{{technology.name}}</a>
+
+
+            </li>
+
+        {% endfor %}
+
+
+
        </div>
 
             <div class="col-sm-2 col-md-6" style="overflow:hidden">
