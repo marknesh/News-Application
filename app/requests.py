@@ -70,7 +70,7 @@ def process_headline(new_list):
         description = top.get('description')
 
         if image:
-            head=Article(id,nameheadline,image,link,timepublished,description)
+            head = Article(id,nameheadline,image,link,timepublished,description)
             topHeadline.append(head)
     return topHeadline
 
