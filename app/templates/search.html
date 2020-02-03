@@ -1,0 +1,11 @@
+{% for newst in search %}
+      <li>{{newst.description}}</li>
+         <li>{{newst.timepublished}}</li>
+         <a href="{{newst.link}}">{{newst.link}}</a>
+
+       <br>
+    <img src="{{newst.image}}" class="img-responsive">
+
+
+
+{% endfor %}

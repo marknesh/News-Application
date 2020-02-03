@@ -9,6 +9,8 @@ News = news.News
 api_key = app.config['NEWS_API_KEY']
 base_url = app.config['NEWS_BASE_URL']
 top_url = app.config['NEWS_TOP_URL']
+search_url = app.config['SEARCH_URL']
+head_url = app.config['HEADLINE_URL']
 
 
 def get_news():
@@ -43,12 +45,11 @@ def process_news(news_list):
 
 
 def get_headlines(sources):
-    headlines = top_url.format(sources,api_key)
-
-    with urllib.request.urlopen(headlines) as urls:
-        headlineurl= urls.read()
+    new = top_url.format(sources,api_key)
+    with urllib.request.urlopen(new) as url:
+        headlineurl= url.read()
         urlforheadlines= json.loads(headlineurl)
-
+        Head= []
         if urlforheadlines['articles']:
             headurl= urlforheadlines['articles']
             Head=process_headline(headurl)
@@ -72,6 +73,39 @@ def process_headline(new_list):
             head=Article(id,nameheadline,image,link,timepublished,description)
             topHeadline.append(head)
     return topHeadline
+
+
+def get_search(query):
+    search = search_url.format(query,api_key)
+
+    with urllib.request.urlopen(search) as urls:
+        searchurl= urls.read()
+        urlforsearch= json.loads(searchurl)
+
+        endsearch = []
+
+        if urlforsearch['articles']:
+            headurl= urlforsearch['articles']
+            endsearch=process_headline(headurl)
+        return endsearch
+
+
+
+
+def get_topstories(country):
+    top_head = head_url.format(country,api_key)
+    with urllib.request.urlopen(top_head) as url:
+        headlinedurl= url.read()
+        urlfortopstories= json.loads(headlinedurl)
+        Head= []
+        if urlfortopstories['articles']:
+            headurl= urlfortopstories['articles']
+            Head=process_headline(headurl)
+
+    return Head
+
+
+
 
 
 

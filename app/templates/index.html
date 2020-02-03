@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+<h1>sassa</h1>
 {% block styles%}
       {{ super() }}
      <link  type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
@@ -8,16 +9,34 @@
        <div class="container">
       <h1>{{title}}</h1>
       <h2><b><i>Sources</i></b></h2>
+           <form>
+        <input type="text" name="search_article" placeholder="Search for article" class="form-control">
+        <input type="submit"  value="Submit" class="btn btn-success">
+    </form>
         <div class="row"> <div class="col-md-6">
       {% for newsources in source %}
             <li>
-         <a href="/{{newsources.id}}">{{newsources.name}}</a>
-                 <a href="{{newsources.linkurl}}">{{newsources.linkurl}}</a>
+         <a href="/sources/{{newsources.id}}">{{newsources.name}}</a>
+<!--                 <a href="{{newsources.linkurl}}">{{newsources.linkurl}}</a>-->
 
             </li>
 
       {% endfor %}
        </div>
+
+            <div class="col-md-6">
+                <h1>TOP HEADLINES</h1>
+                {% for toplines in headlines %}
+
+                <li> {{toplines.nameheadline}} </li>
+
+
+                {% endfor %}
+
+
+
+            </div>
+
 
 
      </div>

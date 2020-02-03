@@ -10,6 +10,7 @@ class Article:
 
     def __init__(self,id,nameheadline,image,link,timepublished,description):
         self.id=id
+
         self.nameheadline=nameheadline
         self.image=image
         self.link=link
