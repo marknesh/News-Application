@@ -11,18 +11,15 @@ margin:0
 padding:0
 overflow-x:hidden
 overflow-y:hidden
+height:100%
 }
 
 
 body{
 background-color:yellow
 }
-.container{
-height:100%
-}
-r{
-width:200%%,margin-left:auto,margin-right:auto,display:block
-}
+
+
 
 .title{
 font-family: 'Lato', sans-serif;
