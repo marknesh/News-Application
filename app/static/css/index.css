@@ -1,7 +1,14 @@
 
 body{
-background-color:white
+background-color:yellow
 }
 .container{
 height:100%
+}
+r{
+width:200%%,margin-left:auto,margin-right:auto,display:block
+}
+
+.title{
+font-family: 'Lato', sans-serif;
 }

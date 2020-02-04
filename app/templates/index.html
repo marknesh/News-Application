@@ -1,16 +1,19 @@
-<!--{% extends 'base.html' %}-->
+{% extends 'base.html' %}
 {% import 'macros.html' as macro %}
+
 <body>
-<h1>sassa</h1>
+
 {% block styles%}
       {{ super() }}
      <link  type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
+     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 
 {% endblock %}
 {% block content %}
        <div class="container">
+           <img src="../static/images/images.png" class="r" >
 
-      <h1>{{title}}</h1>
+      <h1 class="title">{{title}}</h1>
 
            <form>
 
