@@ -1,6 +1,7 @@
 
 body{
 background-color:yellow
+
 }
 .container{
 height:100%
@@ -9,4 +10,13 @@ height:100%
 
 .title{
 font-family: 'Lato', sans-serif;
+}
+h1{
+font-family: 'Cabin', sans-serif;
+font-size:4em
+
+}
+li{
+font-family: 'Rubik', sans-serif;
+font-size:16pt
 }
