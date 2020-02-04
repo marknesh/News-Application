@@ -2,7 +2,7 @@
 ## Application name
 Neshco News-Highlight
 
-![](images/images.png)
+![](app/static/images/images.png)
 
 
 
