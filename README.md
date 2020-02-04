@@ -12,7 +12,8 @@ It also shows the topheadlines on the homepage
 
 ## Operating
 On the opening the website url given above,the user is able to search for different news articles he or she wants.
-The user can also click on links to various news sources and also headlines
+The user can also click on links to various news sources and also headlines.
+Hence making the website very easy to work with.
 
 ##  Technology used
 I used python to create the application together with the flask framework which was really helpful.
