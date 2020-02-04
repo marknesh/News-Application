@@ -8,7 +8,7 @@
 <div class="container">
 {% for newst in search %}
       <li>{{newst.description}}</li>
-         <li>Time published: {{newst.timepublished}}</li>
+         <li class="badge badge-primary">Time published: {{newst.timepublished}}</li>
          <a href="{{newst.link}}">{{newst.link}}</a>
 
        <br>
